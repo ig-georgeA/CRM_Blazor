@@ -1,4 +1,6 @@
 @page "/account-sample"
+@inject Northwind.NorthwindService northwindService
+@inject Financial.FinancialService financialService
 
 <div class="column-layout account-sample-container">
     <div class="column-layout group">
@@ -78,307 +80,335 @@
                     Related
                 </IgbTab>
                 <IgbTabPanel class="column-layout tab-item-content" account-sample-scope>
-                    <div class="column-layout group_9">
-                        <div class="row-layout buttons">
-                            <IgbButton class="button" account-sample-scope>
-                                <span class="material-icons">
-                                    person_add
-                                </span>
-                                <span>Contact</span>
-                                <IgbRipple></IgbRipple>
-                            </IgbButton>
-                            <IgbButton class="button" account-sample-scope>
-                                <span class="material-icons">
-                                    star
-                                </span>
-                                <span>New Opportunity</span>
-                                <IgbRipple></IgbRipple>
-                            </IgbButton>
-                            <IgbButton class="button" account-sample-scope>
-                                <span class="material-icons">
-                                    add
-                                </span>
-                                <span>New Case</span>
-                                <IgbRipple></IgbRipple>
-                            </IgbButton>
-                            <IgbButton class="button" account-sample-scope>
-                                <span class="material-icons">
-                                    notes
-                                </span>
-                                <span>Add Note</span>
-                                <IgbRipple></IgbRipple>
-                            </IgbButton>
-                            <IgbButton class="button" account-sample-scope>
-                                <span class="material-icons">
-                                    file_copy
-                                </span>
-                                <span>Add Files</span>
-                                <IgbRipple></IgbRipple>
-                            </IgbButton>
-                        </div>
-                        <IgbAccordion SingleSelect="false" class="accordion" account-sample-scope>
-                            <IgbExpansionPanel IndicatorPosition="ExpansionPanelIndicatorPosition.End">
-                                <div class="column-layout group_10">
-                                    <div class="row-layout group_11">
-                                        <div class="row-layout group_12">
-                                            <img src="assets/Accounts Icon - Green.svg" class="image_1" />
-                                        </div>
-                                        <a href class="typography__body-2 hyperlink">
-                                            Around The Horn
-                                        </a>
-                                    </div>
-                                    <div class="column-layout group_13">
-                                        <div class="row-layout group_14">
-                                            <p class="typography__subtitle-2 text_2">
-                                                Stage:
-                                            </p>
-                                            <p class="typography__body-2 text">
-                                                Qualification
-                                            </p>
-                                        </div>
-                                        <div class="row-layout group_14">
-                                            <p class="typography__subtitle-2 text_2">
-                                                Amount:
-                                            </p>
-                                            <p class="typography__body-2 text">
-                                                Owner
-                                            </p>
-                                        </div>
-                                        <div class="row-layout group_14">
-                                            <p class="typography__subtitle-2 text_2">
-                                                Close Date:
-                                            </p>
-                                            <p class="typography__body-2 text">
-                                                9/12/2022
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <span slot="title">Opportunities (1)</span>
-                            </IgbExpansionPanel>
-                            <IgbExpansionPanel IndicatorPosition="ExpansionPanelIndicatorPosition.End">
-                                <IgbList class="list" account-sample-scope>
-                                    <IgbListItem>
-                                        <div slot="start">
-                                            <IgbAvatar Shape="AvatarShape.Circle" class="avatar avatar_1" account-sample-scope>
-                                                <span class="material-icons">insert_drive_file</span>
-                                            </IgbAvatar>
-                                        </div>
-                                        <div>
-                                            <a href class="typography__body-2 content">
-                                                Around-The-Horn-Contract-2022.docx
-                                            </a>
-                                        </div>
-                                    </IgbListItem>
-                                    <IgbListItem>
-                                        <div slot="start">
-                                            <IgbAvatar Shape="AvatarShape.Circle" class="avatar avatar_2" account-sample-scope>
-                                                <span class="material-icons">insert_drive_file</span>
-                                            </IgbAvatar>
-                                        </div>
-                                        <div>
-                                            <a href class="typography__body-2 content">
-                                                Around-The-Horn-Contract-2021.docx
-                                            </a>
-                                        </div>
-                                    </IgbListItem>
-                                </IgbList>
-                                <span slot="title">Contracts (2)</span>
-                            </IgbExpansionPanel>
-                            <IgbExpansionPanel IndicatorPosition="ExpansionPanelIndicatorPosition.End">
-                                <div class="column-layout group_10">
-                                    <div class="row-layout group_11">
-                                        <IgbAvatar Initials="JL" Shape="AvatarShape.Circle" class="avatar avatar_3" account-sample-scope></IgbAvatar>
-                                        <a href class="typography__body-2 hyperlink">
-                                            Janine Labrune
-                                        </a>
-                                    </div>
-                                    <div class="column-layout group_13">
-                                        <div class="row-layout group_14">
-                                            <p class="typography__subtitle-2 text_2">
-                                                Account Name:
-                                            </p>
-                                            <p class="typography__body-2 text">
-                                                Thomas Hardy
-                                            </p>
-                                        </div>
-                                        <div class="row-layout group_14">
-                                            <p class="typography__subtitle-2 text_2">
-                                                Title:
-                                            </p>
-                                            <p class="typography__body-2 text">
-                                                Owner
-                                            </p>
-                                        </div>
-                                        <div class="row-layout group_15">
-                                            <p class="typography__subtitle-2 text_2">
-                                                Direct:
-                                            </p>
-                                            <IgbCheckbox class="checkbox" account-sample-scope></IgbCheckbox>
-                                        </div>
-                                    </div>
-                                </div>
-                                <span slot="title">Related Contacts (1)</span>
-                            </IgbExpansionPanel>
-                            <IgbExpansionPanel IndicatorPosition="ExpansionPanelIndicatorPosition.End">
-                                <span slot="title">Cases (0)</span>
-                            </IgbExpansionPanel>
-                            <IgbExpansionPanel IndicatorPosition="ExpansionPanelIndicatorPosition.End">
-                                <span slot="title">Notes (0)</span>
-                            </IgbExpansionPanel>
-                            <IgbExpansionPanel IndicatorPosition="ExpansionPanelIndicatorPosition.End">
-                                <span slot="title">Files (0)</span>
-                            </IgbExpansionPanel>
-                        </IgbAccordion>
+                    <div class="row-layout buttons-1">
+                        <IgbButton class="button" account-sample-scope>
+                            <span class="material-icons">
+                                person_add
+                            </span>
+                            <span>Contact</span>
+                            <IgbRipple></IgbRipple>
+                        </IgbButton>
+                        <IgbButton class="button" account-sample-scope>
+                            <span class="material-icons">
+                                star
+                            </span>
+                            <span>New Opportunity</span>
+                            <IgbRipple></IgbRipple>
+                        </IgbButton>
+                        <IgbButton class="button" account-sample-scope>
+                            <span class="material-icons">
+                                add
+                            </span>
+                            <span>New Case</span>
+                            <IgbRipple></IgbRipple>
+                        </IgbButton>
+                        <IgbButton class="button" account-sample-scope>
+                            <span class="material-icons">
+                                notes
+                            </span>
+                            <span>Add Note</span>
+                            <IgbRipple></IgbRipple>
+                        </IgbButton>
+                        <IgbButton class="button" account-sample-scope>
+                            <span class="material-icons">
+                                file_copy
+                            </span>
+                            <span>Add Files</span>
+                            <IgbRipple></IgbRipple>
+                        </IgbButton>
                     </div>
+                    <IgbAccordion SingleSelect="false" class="accordion" account-sample-scope>
+                        <IgbExpansionPanel IndicatorPosition="ExpansionPanelIndicatorPosition.End">
+                            <div class="column-layout group_9">
+                                <div class="row-layout group_10">
+                                    <div class="row-layout group_11">
+                                        <img src="assets/Accounts Icon - Green.svg" class="image_1" />
+                                    </div>
+                                    <a href class="typography__body-2 hyperlink">
+                                        Around The Horn
+                                    </a>
+                                </div>
+                                <div class="column-layout group_12">
+                                    <div class="row-layout group_13">
+                                        <p class="typography__subtitle-2 text_2">
+                                            Stage:
+                                        </p>
+                                        <p class="typography__body-2 text">
+                                            Qualification
+                                        </p>
+                                    </div>
+                                    <div class="row-layout group_13">
+                                        <p class="typography__subtitle-2 text_2">
+                                            Amount:
+                                        </p>
+                                        <p class="typography__body-2 text">
+                                            Owner
+                                        </p>
+                                    </div>
+                                    <div class="row-layout group_13">
+                                        <p class="typography__subtitle-2 text_2">
+                                            Close Date:
+                                        </p>
+                                        <p class="typography__body-2 text">
+                                            9/12/2022
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <span slot="title">Opportunities (1)</span>
+                        </IgbExpansionPanel>
+                        <IgbExpansionPanel IndicatorPosition="ExpansionPanelIndicatorPosition.End">
+                            <div class="column-layout group_9">
+                                <div class="row-layout group_10">
+                                    <IgbAvatar Initials="JL" Shape="AvatarShape.Circle" class="avatar avatar_1" account-sample-scope></IgbAvatar>
+                                    <a href class="typography__body-2 hyperlink">
+                                        Janine Labrune
+                                    </a>
+                                </div>
+                                <div class="column-layout group_12">
+                                    <div class="row-layout group_13">
+                                        <p class="typography__subtitle-2 text_2">
+                                            Account Name:
+                                        </p>
+                                        <p class="typography__body-2 text">
+                                            Thomas Hardy
+                                        </p>
+                                    </div>
+                                    <div class="row-layout group_13">
+                                        <p class="typography__subtitle-2 text_2">
+                                            Title:
+                                        </p>
+                                        <p class="typography__body-2 text">
+                                            Owner
+                                        </p>
+                                    </div>
+                                    <div class="row-layout group_14">
+                                        <p class="typography__subtitle-2 text_2">
+                                            Direct:
+                                        </p>
+                                        <IgbCheckbox class="checkbox" account-sample-scope></IgbCheckbox>
+                                    </div>
+                                </div>
+                            </div>
+                            <span slot="title">Related Contacts (1)</span>
+                        </IgbExpansionPanel>
+                        <IgbExpansionPanel IndicatorPosition="ExpansionPanelIndicatorPosition.End">
+                            <IgbList class="list" account-sample-scope>
+                                <IgbListItem>
+                                    <div slot="start">
+                                        <IgbAvatar Shape="AvatarShape.Circle" class="avatar avatar_2" account-sample-scope>
+                                            <span class="material-icons">insert_drive_file</span>
+                                        </IgbAvatar>
+                                    </div>
+                                    <div>
+                                        <a href class="typography__body-2 content">
+                                            Around-The-Horn-Contract-2022.docx
+                                        </a>
+                                    </div>
+                                </IgbListItem>
+                                <IgbListItem>
+                                    <div slot="start">
+                                        <IgbAvatar Shape="AvatarShape.Circle" class="avatar avatar_3" account-sample-scope>
+                                            <span class="material-icons">insert_drive_file</span>
+                                        </IgbAvatar>
+                                    </div>
+                                    <div>
+                                        <a href class="typography__body-2 content">
+                                            Around-The-Horn-Contract-2021.docx
+                                        </a>
+                                    </div>
+                                </IgbListItem>
+                            </IgbList>
+                            <span slot="title">Contracts (2)</span>
+                        </IgbExpansionPanel>
+                        <IgbExpansionPanel IndicatorPosition="ExpansionPanelIndicatorPosition.End">
+                            <p class="typography__body-1 content"></p>
+                            <span slot="title">Cases (0)</span>
+                        </IgbExpansionPanel>
+                        <IgbExpansionPanel IndicatorPosition="ExpansionPanelIndicatorPosition.End">
+                            <p class="typography__body-1 content"></p>
+                            <span slot="title">Notes (0)</span>
+                        </IgbExpansionPanel>
+                        <IgbExpansionPanel IndicatorPosition="ExpansionPanelIndicatorPosition.End">
+                            <p class="typography__body-1 content"></p>
+                            <span slot="title">Files (0)</span>
+                        </IgbExpansionPanel>
+                    </IgbAccordion>
                 </IgbTabPanel>
                 <IgbTab>
                     Details
                 </IgbTab>
-                <IgbTabPanel class="row-layout tab-item-content" account-sample-scope></IgbTabPanel>
+                <IgbTabPanel class="row-layout tab-item-content_1" account-sample-scope>
+                    <IgbGrid Data="northwindEmployees" PrimaryKey="EmployeeID" DisplayDensity="DisplayDensity.Cosy" AllowFiltering="true" FilterMode="FilterMode.ExcelStyleFilter" AutoGenerate="false" class="ig-typography grid" account-sample-scope>
+                        <IgbColumn Field="LastName" DataType="GridColumnDataType.String" Header="lastName" Sortable="true" Selectable="false"></IgbColumn>
+                        <IgbColumn Field="EmployeeID" DataType="GridColumnDataType.Number" Header="employeeID" Sortable="true" Selectable="false"></IgbColumn>
+                        <IgbColumn Field="FirstName" DataType="GridColumnDataType.String" Header="firstName" Sortable="true" Selectable="false"></IgbColumn>
+                        <IgbColumn Field="Title" DataType="GridColumnDataType.String" Header="title" Sortable="true" Selectable="false"></IgbColumn>
+                        <IgbColumn Field="TitleOfCourtesy" DataType="GridColumnDataType.String" Header="titleOfCourtesy" Sortable="true" Selectable="false"></IgbColumn>
+                        <IgbColumn Field="BirthDate" DataType="GridColumnDataType.Date" Header="birthDate" Sortable="true" Selectable="false"></IgbColumn>
+                        <IgbColumn Field="HireDate" DataType="GridColumnDataType.Date" Header="hireDate" Sortable="true" Selectable="false"></IgbColumn>
+                        <IgbColumn Field="Address.Street" DataType="GridColumnDataType.String" Header="street" Sortable="true" Selectable="false"></IgbColumn>
+                        <IgbColumn Field="Address.City" DataType="GridColumnDataType.String" Header="city" Sortable="true" Selectable="false"></IgbColumn>
+                        <IgbColumn Field="Address.Region" DataType="GridColumnDataType.String" Header="region" Sortable="true" Selectable="false"></IgbColumn>
+                        <IgbColumn Field="Address.PostalCode" DataType="GridColumnDataType.String" Header="postalCode" Sortable="true" Selectable="false"></IgbColumn>
+                        <IgbColumn Field="Address.Country" DataType="GridColumnDataType.String" Header="country" Sortable="true" Selectable="false"></IgbColumn>
+                        <IgbColumn Field="Address.Phone" DataType="GridColumnDataType.String" Header="phone" Sortable="true" Selectable="false"></IgbColumn>
+                        <IgbColumn Field="ManagerID" DataType="GridColumnDataType.Number" Header="managerID" Sortable="true" Selectable="false"></IgbColumn>
+                        <IgbColumn Field="Notes" DataType="GridColumnDataType.String" Header="notes" Sortable="true" Selectable="false"></IgbColumn>
+                        <IgbColumn Field="AvatarUrl" DataType="GridColumnDataType.String" Header="avatarUrl" Sortable="true" Selectable="false"></IgbColumn>
+                    </IgbGrid>
+                </IgbTabPanel>
                 <IgbTab>
                     News
                 </IgbTab>
-                <IgbTabPanel class="row-layout tab-item-content" account-sample-scope></IgbTabPanel>
+                <IgbTabPanel class="row-layout tab-item-content_1" account-sample-scope>
+                    <IgbCategoryChart DataSource="financialBoxOfficeRevenue" ComputedPlotAreaMarginMode="ComputedPlotAreaMarginMode.Series" class="category-chart" account-sample-scope></IgbCategoryChart>
+                </IgbTabPanel>
             </IgbTabs>
         </div>
-        <div class="column-layout group_16">
+        <div class="column-layout group_15">
             <IgbTabs class="tabs" account-sample-scope>
                 <IgbTab Selected="true">
                     Activity
                 </IgbTab>
                 <IgbTabPanel class="column-layout tab-item-content" account-sample-scope>
-                    <div class="column-layout group_9">
-                        <div class="row-layout buttons_1">
-                            <IgbButton class="button" account-sample-scope>
-                                <span class="material-icons">
-                                    calendar_today
-                                </span>
-                                <span>New Meeting</span>
-                                <IgbRipple></IgbRipple>
-                            </IgbButton>
-                            <IgbButton class="button" account-sample-scope>
-                                <span class="material-icons">
-                                    star_border
-                                </span>
-                                <span>New task</span>
-                                <IgbRipple></IgbRipple>
-                            </IgbButton>
-                            <IgbButton class="button_1" account-sample-scope>
-                                <span class="material-icons">
-                                    call
-                                </span>
-                                <span>Log a call</span>
-                                <IgbRipple></IgbRipple>
-                            </IgbButton>
-                        </div>
-                        <IgbAccordion SingleSelect="false" class="accordion" account-sample-scope>
-                            <IgbExpansionPanel IndicatorPosition="ExpansionPanelIndicatorPosition.End">
-                                <IgbList class="list" account-sample-scope>
-                                    <IgbListItem>
-                                        <div slot="start">
-                                            <IgbAvatar Src="assets/Calendar-Avatar-Icon.svg" class="avatar avatar_4" account-sample-scope></IgbAvatar>
-                                        </div>
-                                        <div>
-                                            <div class="column-layout group_17">
-                                                <div class="row-layout group_18">
-                                                    <p class="typography__subtitle-2 text_3">
-                                                        Project Intro
-                                                    </p>
-                                                </div>
-                                                <div class="row-layout group_19">
-                                                    <p class="typography__caption text_4">
-                                                        11/1/2022
-                                                    </p>
-                                                    <p class="typography__caption text_4">
-                                                        -
-                                                    </p>
-                                                    <p class="typography__caption text_4">
-                                                        10am
-                                                    </p>
-                                                </div>
-                                                <IgbChip Size="SizableComponentSize.Large" class="chip" account-sample-scope>
-                                                    Zoom Meeting
-                                                </IgbChip>
-                                            </div>
-                                        </div>
-                                    </IgbListItem>
-                                    <IgbListItem>
-                                        <div slot="start">
-                                            <IgbAvatar Src="assets/Calendar-Avatar-Icon.svg" class="avatar avatar_5" account-sample-scope></IgbAvatar>
-                                        </div>
-                                        <div>
-                                            <div class="column-layout group_17">
-                                                <div class="row-layout group_18">
-                                                    <p class="typography__subtitle-2 text_3">
-                                                        Sync Meeting
-                                                    </p>
-                                                </div>
-                                                <div class="row-layout group_19">
-                                                    <p class="typography__caption text_4">
-                                                        11/7/2022
-                                                    </p>
-                                                    <p class="typography__caption text_4">
-                                                        -
-                                                    </p>
-                                                    <p class="typography__caption text_4">
-                                                        2pm
-                                                    </p>
-                                                </div>
-                                                <IgbChip Size="SizableComponentSize.Large" class="chip" account-sample-scope>
-                                                    On Site Meeting
-                                                </IgbChip>
-                                            </div>
-                                        </div>
-                                    </IgbListItem>
-                                    <IgbListItem>
-                                        <div slot="start">
-                                            <IgbAvatar Src="assets/Calendar-Avatar-Icon.svg" class="avatar avatar_6" account-sample-scope></IgbAvatar>
-                                        </div>
-                                        <div>
-                                            <div class="column-layout group_17">
-                                                <div class="row-layout group_18">
-                                                    <p class="typography__subtitle-2 text_3">
-                                                        Wrap Up Meeting
-                                                    </p>
-                                                </div>
-                                                <div class="row-layout group_19">
-                                                    <p class="typography__caption text_4">
-                                                        11/14/2022
-                                                    </p>
-                                                    <p class="typography__caption text_4">
-                                                        -
-                                                    </p>
-                                                    <p class="typography__caption text_4">
-                                                        4pm
-                                                    </p>
-                                                </div>
-                                                <IgbChip Size="SizableComponentSize.Large" class="chip" account-sample-scope>
-                                                    Phone call
-                                                </IgbChip>
-                                            </div>
-                                        </div>
-                                    </IgbListItem>
-                                </IgbList>
-                                <span slot="title">Upcoming Events (3)</span>
-                            </IgbExpansionPanel>
-                            <IgbExpansionPanel IndicatorPosition="ExpansionPanelIndicatorPosition.End">
-                                <span slot="title">Tasks (0)</span>
-                            </IgbExpansionPanel>
-                            <IgbExpansionPanel IndicatorPosition="ExpansionPanelIndicatorPosition.End">
-                                <span slot="title">Call Logs (0)</span>
-                            </IgbExpansionPanel>
-                        </IgbAccordion>
+                    <div class="row-layout buttons">
+                        <IgbButton class="button" account-sample-scope>
+                            <span class="material-icons">
+                                calendar_today
+                            </span>
+                            <span>New Meeting</span>
+                            <IgbRipple></IgbRipple>
+                        </IgbButton>
+                        <IgbButton class="button" account-sample-scope>
+                            <span class="material-icons">
+                                star_border
+                            </span>
+                            <span>New task</span>
+                            <IgbRipple></IgbRipple>
+                        </IgbButton>
+                        <IgbButton class="button_1" account-sample-scope>
+                            <span class="material-icons">
+                                call
+                            </span>
+                            <span>Log a call</span>
+                            <IgbRipple></IgbRipple>
+                        </IgbButton>
                     </div>
+                    <IgbAccordion SingleSelect="false" class="accordion" account-sample-scope>
+                        <IgbExpansionPanel IndicatorPosition="ExpansionPanelIndicatorPosition.End">
+                            <IgbList class="list" account-sample-scope>
+                                <IgbListItem>
+                                    <div slot="start">
+                                        <IgbAvatar Src="assets/Calendar-Avatar-Icon.svg" class="avatar avatar_4" account-sample-scope></IgbAvatar>
+                                    </div>
+                                    <div>
+                                        <div class="column-layout group_16">
+                                            <div class="row-layout group_17">
+                                                <p class="typography__subtitle-2 text_3">
+                                                    Project Intro
+                                                </p>
+                                            </div>
+                                            <div class="row-layout group_18">
+                                                <p class="typography__caption text_4">
+                                                    11/1/2022
+                                                </p>
+                                                <p class="typography__caption text_4">
+                                                    -
+                                                </p>
+                                                <p class="typography__caption text_4">
+                                                    10am
+                                                </p>
+                                            </div>
+                                            <IgbChip Size="SizableComponentSize.Large" class="chip" account-sample-scope>
+                                                Zoom Meeting
+                                            </IgbChip>
+                                        </div>
+                                    </div>
+                                </IgbListItem>
+                                <IgbListItem>
+                                    <div slot="start">
+                                        <IgbAvatar Src="assets/Calendar-Avatar-Icon.svg" class="avatar avatar_5" account-sample-scope></IgbAvatar>
+                                    </div>
+                                    <div>
+                                        <div class="column-layout group_16">
+                                            <div class="row-layout group_17">
+                                                <p class="typography__subtitle-2 text_3">
+                                                    Sync Meeting
+                                                </p>
+                                            </div>
+                                            <div class="row-layout group_18">
+                                                <p class="typography__caption text_4">
+                                                    11/7/2022
+                                                </p>
+                                                <p class="typography__caption text_4">
+                                                    -
+                                                </p>
+                                                <p class="typography__caption text_4">
+                                                    2pm
+                                                </p>
+                                            </div>
+                                            <IgbChip Size="SizableComponentSize.Large" class="chip" account-sample-scope>
+                                                On Site Meeting
+                                            </IgbChip>
+                                        </div>
+                                    </div>
+                                </IgbListItem>
+                                <IgbListItem>
+                                    <div slot="start">
+                                        <IgbAvatar Src="assets/Calendar-Avatar-Icon.svg" class="avatar avatar_6" account-sample-scope></IgbAvatar>
+                                    </div>
+                                    <div>
+                                        <div class="column-layout group_16">
+                                            <div class="row-layout group_17">
+                                                <p class="typography__subtitle-2 text_3">
+                                                    Wrap Up Meeting
+                                                </p>
+                                            </div>
+                                            <div class="row-layout group_18">
+                                                <p class="typography__caption text_4">
+                                                    11/14/2022
+                                                </p>
+                                                <p class="typography__caption text_4">
+                                                    -
+                                                </p>
+                                                <p class="typography__caption text_4">
+                                                    4pm
+                                                </p>
+                                            </div>
+                                            <IgbChip Size="SizableComponentSize.Large" class="chip" account-sample-scope>
+                                                Phone call
+                                            </IgbChip>
+                                        </div>
+                                    </div>
+                                </IgbListItem>
+                            </IgbList>
+                            <span slot="title">Upcoming Events (3)</span>
+                        </IgbExpansionPanel>
+                        <IgbExpansionPanel IndicatorPosition="ExpansionPanelIndicatorPosition.End">
+                            <span slot="title">Tasks (0)</span>
+                        </IgbExpansionPanel>
+                        <IgbExpansionPanel IndicatorPosition="ExpansionPanelIndicatorPosition.End">
+                            <span slot="title">Call Logs (0)</span>
+                        </IgbExpansionPanel>
+                    </IgbAccordion>
                 </IgbTabPanel>
                 <IgbTab>
                     Conversations
                 </IgbTab>
-                <IgbTabPanel class="row-layout tab-item-content" account-sample-scope></IgbTabPanel>
+                <IgbTabPanel class="row-layout tab-item-content_1" account-sample-scope></IgbTabPanel>
             </IgbTabs>
         </div>
     </div>
 </div>
 
 @code {
+    private Northwind.EmployeesType[] northwindEmployees = Array.Empty<Northwind.EmployeesType>();
+    private Financial.BoxOfficeRevenueType[] financialBoxOfficeRevenue = Array.Empty<Financial.BoxOfficeRevenueType>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        northwindEmployees = await this.northwindService.GetEmployees() ?? northwindEmployees;
+        financialBoxOfficeRevenue = await this.financialService.GetBoxOfficeRevenue() ?? financialBoxOfficeRevenue;
+    }
 }
