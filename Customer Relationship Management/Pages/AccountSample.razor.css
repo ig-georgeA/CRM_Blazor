@@ -125,20 +125,12 @@
     min-width: 576px;
     flex-grow: 2;
 }
-.group_9 {
-    justify-content: flex-start;
-    align-items: stretch;
-    align-content: flex-start;
-    position: relative;
-    min-width: 50px;
-    flex-shrink: 0;
-}
 .tabs {
     min-width: 0;
     min-height: 0;
     flex-shrink: 0;
 }
-.group_10 {
+.group_9 {
     justify-content: flex-start;
     align-items: stretch;
     align-content: flex-start;
@@ -162,7 +154,7 @@
     overflow-y: auto;
     flex-shrink: 0;
 }
-.group_11 {
+.group_10 {
     justify-content: flex-start;
     align-items: stretch;
     align-content: flex-start;
@@ -171,7 +163,7 @@
     min-width: 50px;
     min-height: 50px;
 }
-.group_12 {
+.group_11 {
     justify-content: flex-start;
     align-items: center;
     align-content: flex-start;
@@ -180,7 +172,7 @@
     min-width: 50px;
     flex-shrink: 0;
 }
-.group_13 {
+.group_12 {
     background-color: rgba(71, 124, 41, 0.2);
     justify-content: center;
     align-items: center;
@@ -189,7 +181,7 @@
     width: 40px;
     height: 40px;
 }
-.group_14 {
+.group_13 {
     justify-content: flex-start;
     align-items: stretch;
     align-content: flex-start;
@@ -198,7 +190,7 @@
     min-width: 50px;
     min-height: 50px;
 }
-.group_15 {
+.group_14 {
     justify-content: flex-start;
     align-items: baseline;
     align-content: flex-start;
@@ -206,7 +198,7 @@
     position: relative;
     min-width: 50px;
 }
-.group_16 {
+.group_15 {
     justify-content: flex-start;
     align-items: center;
     align-content: flex-start;
@@ -214,7 +206,7 @@
     position: relative;
     min-width: 50px;
 }
-.group_17 {
+.group_16 {
     background-color: hsla(var(--ig-surface-500));
     border-color: hsla(var(--ig-gray-200));
     border-width: 1px;
@@ -236,7 +228,7 @@
     gap: 16px;
     position: relative;
 }
-.group_18 {
+.group_17 {
     justify-content: flex-start;
     align-items: stretch;
     align-content: flex-start;
@@ -245,7 +237,7 @@
     min-width: 50px;
     min-height: 50px;
 }
-.group_19 {
+.group_18 {
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: stretch;
@@ -256,7 +248,7 @@
     min-height: auto;
     flex-shrink: 0;
 }
-.group_20 {
+.group_19 {
     justify-content: flex-start;
     align-items: stretch;
     align-content: flex-start;
