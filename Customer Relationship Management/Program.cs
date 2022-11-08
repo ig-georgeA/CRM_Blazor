@@ -4,6 +4,7 @@ using Customer_Relationship_Management;
 using Customer_Relationship_Management.ECommerce;
 using Customer_Relationship_Management.Northwind;
 using Customer_Relationship_Management.CRMApp;
+using Customer_Relationship_Management.Financial;
 using IgniteUI.Blazor.Controls;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
@@ -14,6 +15,7 @@ builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.
 builder.Services.AddScoped<ECommerceService>();
 builder.Services.AddScoped<NorthwindService>();
 builder.Services.AddScoped<CRMAppService>();
+builder.Services.AddScoped<FinancialService>();
 RegisterIgniteUI(builder.Services);
 
 await builder.Build().RunAsync();

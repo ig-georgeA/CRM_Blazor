@@ -124,24 +124,15 @@
     padding: 16px;
     min-width: 576px;
     flex-grow: 2;
+    flex-shrink: 0;
 }
 .tabs {
     min-width: 0;
     min-height: 0;
-    flex-shrink: 0;
+    flex-grow: 1;
+    flex-basis: 0;
 }
-.group_9 {
-    justify-content: flex-start;
-    align-items: stretch;
-    align-content: flex-start;
-    gap: 24px;
-    position: relative;
-    padding: 24px 0 0;
-    min-width: 50px;
-    min-height: 50px;
-    flex-shrink: 0;
-}
-.buttons {
+.buttons-1 {
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
@@ -154,7 +145,7 @@
     overflow-y: auto;
     flex-shrink: 0;
 }
-.group_10 {
+.group_9 {
     justify-content: flex-start;
     align-items: stretch;
     align-content: flex-start;
@@ -163,7 +154,7 @@
     min-width: 50px;
     min-height: 50px;
 }
-.group_11 {
+.group_10 {
     justify-content: flex-start;
     align-items: center;
     align-content: flex-start;
@@ -172,7 +163,7 @@
     min-width: 50px;
     flex-shrink: 0;
 }
-.group_12 {
+.group_11 {
     background-color: rgba(71, 124, 41, 0.2);
     justify-content: center;
     align-items: center;
@@ -181,7 +172,7 @@
     width: 40px;
     height: 40px;
 }
-.group_13 {
+.group_12 {
     justify-content: flex-start;
     align-items: stretch;
     align-content: flex-start;
@@ -190,7 +181,7 @@
     min-width: 50px;
     min-height: 50px;
 }
-.group_14 {
+.group_13 {
     justify-content: flex-start;
     align-items: baseline;
     align-content: flex-start;
@@ -198,7 +189,7 @@
     position: relative;
     min-width: 50px;
 }
-.group_15 {
+.group_14 {
     justify-content: flex-start;
     align-items: center;
     align-content: flex-start;
@@ -206,7 +197,7 @@
     position: relative;
     min-width: 50px;
 }
-.group_16 {
+.group_15 {
     background-color: hsla(var(--ig-surface-500));
     border-color: hsla(var(--ig-gray-200));
     border-width: 1px;
@@ -217,10 +208,11 @@
     gap: 24px;
     position: relative;
     padding: 16px;
-    min-width: min-content;
+    min-width: max-content;
     flex-grow: 1;
+    flex-shrink: 0;
 }
-.buttons_1 {
+.buttons {
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
@@ -228,7 +220,7 @@
     gap: 16px;
     position: relative;
 }
-.group_17 {
+.group_16 {
     justify-content: flex-start;
     align-items: stretch;
     align-content: flex-start;
@@ -237,7 +229,7 @@
     min-width: 50px;
     min-height: 50px;
 }
-.group_18 {
+.group_17 {
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: stretch;
@@ -248,7 +240,7 @@
     min-height: auto;
     flex-shrink: 0;
 }
-.group_19 {
+.group_18 {
     justify-content: flex-start;
     align-items: stretch;
     align-content: flex-start;
@@ -313,14 +305,14 @@
     height: max-content;
 }
 .avatar_1::part(base) {
-    color: hsla(var(--ig-gray-500));
+    color: hsla(var(--ig-primary-500));
+    background-color: hsla(var(--ig-secondary-200));
 }
 .avatar_2::part(base) {
     color: hsla(var(--ig-gray-500));
 }
 .avatar_3::part(base) {
-    color: hsla(var(--ig-primary-500));
-    background-color: hsla(var(--ig-secondary-200));
+    color: hsla(var(--ig-gray-500));
 }
 .avatar_4::part(base) {
     background-color: transparent;
@@ -332,6 +324,18 @@
     background-color: transparent;
 }
 .tab-item-content {
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: flex-start;
+    gap: 24px;
+    overflow: auto;
+    position: absolute;
+    padding: 16px 0 0;
+    height: 100%;
+    min-width: 100%;
+    min-height: 50px;
+}
+.tab-item-content_1 {
     justify-content: flex-start;
     align-items: stretch;
     align-content: flex-start;
@@ -364,4 +368,16 @@
 }
 .list {
     height: max-content;
+}
+.grid {
+    min-width: 600px;
+    min-height: 300px;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+.category-chart {
+    min-width: 400px;
+    min-height: 300px;
+    flex-grow: 1;
+    flex-basis: 0;
 }
